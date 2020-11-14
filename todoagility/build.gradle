@@ -1,0 +1,15 @@
+plugins {
+    id 'java'
+    id 'idea'
+}
+
+dependencies {
+    //compile project(':core')
+}
+
+test {
+    useJUnitPlatform{
+        includeEngines 'junit-jupiter'
+        excludeEngines 'junit-vintage'
+    }
+}
