@@ -1,8 +1,10 @@
 package net.roadtoagility.totoagility.agile.domain.businessobjects;
 
+import net.roadtoagility.totoagility.agile.domain.framework.businessobjects.ExposeValue;
+
 import java.util.Objects;
 
-public class Description {
+public class Description implements ExposeValue<String> {
 
     private static final int DESCRIPTION_LENGTH_LIMIT = 100;
 
@@ -18,6 +20,11 @@ public class Description {
     }
 
     @Override
+    public String getValue() {
+        return _description;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -29,4 +36,5 @@ public class Description {
     public int hashCode() {
         return Objects.hash(_description);
     }
+
 }
