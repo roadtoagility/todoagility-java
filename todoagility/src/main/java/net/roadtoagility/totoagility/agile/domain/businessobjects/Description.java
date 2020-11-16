@@ -1,12 +1,8 @@
 package net.roadtoagility.totoagility.agile.domain.businessobjects;
 
-import net.roadtoagility.totoagility.agile.domain.framework.businessobjects.ExposeValue;
-
 import java.util.Objects;
 
-public class Description implements ExposeValue<String> {
-
-    private static final int DESCRIPTION_LENGTH_LIMIT = 100;
+public class Description{
 
     private final String _description;
 
@@ -14,12 +10,11 @@ public class Description implements ExposeValue<String> {
         _description = description;
     }
 
-    public static Description From(String description){
+    public static Description from(String description){
 
          return new Description(description);
     }
 
-    @Override
     public String getValue() {
         return _description;
     }

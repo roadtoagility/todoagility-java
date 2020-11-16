@@ -1,11 +1,9 @@
-package net.roadtoagility.totoagility.agile.domain.businessobjects;
-
-import net.roadtoagility.totoagility.agile.domain.framework.businessobjects.ExposeValue;
+package net.roadtoagility.totoagility.agile.domain.framework.businessobjects;
 
 import java.util.Date;
 import java.util.Objects;
 
-public class EntityId implements ExposeValue<Long> {
+public class EntityId {
 
     private final long _id;
 
@@ -13,7 +11,7 @@ public class EntityId implements ExposeValue<Long> {
         _id = id;
     }
 
-    public static EntityId From(long id){
+    public static EntityId from(long id){
 
          return new EntityId(id);
     }
@@ -23,7 +21,6 @@ public class EntityId implements ExposeValue<Long> {
         return new EntityId(date.getTime());
     }
 
-    @Override
     public Long getValue() {
         return _id;
     }
